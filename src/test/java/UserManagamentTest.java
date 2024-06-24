@@ -1,4 +1,5 @@
 
+import io.qameta.allure.testng.Tag;
 import org.example.pages.Admin.entities.AddUserEntities;
 import org.example.utils.Randomizer;
 import org.testng.Assert;
@@ -14,6 +15,7 @@ public class UserManagamentTest extends BaseTest {
     }
 
     @Test
+    @Tag("Smoke")
     public void addNewUser() {
         AddUserEntities addUserEntities = Randomizer.addUserData();
         menuNavigate.navigateTo(ADMIN);
@@ -21,6 +23,7 @@ public class UserManagamentTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Tag("Smoke")
     public void addNewUserAndCancel() {
         AddUserEntities addUserEntities = Randomizer.addUserData();
         menuNavigate.navigateTo(ADMIN);
