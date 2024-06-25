@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="smoke_suite" parallel="false">
+<suite name="SmokeSuite" parallel="false">
         <listeners>
-            <listener class-name="org.example.listener.ScreenshotListener"></listener>
+            <listener class-name="org.example.listener.ScreenshotListener"/>
         </listeners>
-    <test verbose="2" preserve-order="true" name="src/test/java/UserManagamentTest.java">
+    <test name="SmokeTests">
         <classes>
-            <class name="UserManagamentTest"></class>
+            <class name="UserManagamentTest"/>
         </classes>
     </test>
 </suite>
+
+<!-- verbose="2" preserve-order="true" -->
