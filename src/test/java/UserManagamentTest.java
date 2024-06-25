@@ -1,13 +1,15 @@
 
 import io.qameta.allure.testng.Tag;
+import org.example.listener.ScreenshotListener;
 import org.example.pages.Admin.entities.AddUserEntities;
 import org.example.utils.Randomizer;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.enums.Endpoints.*;
-
+@Listeners(ScreenshotListener.class)
 public class UserManagamentTest extends BaseTest {
     @BeforeClass
     public void beforeClass() {
