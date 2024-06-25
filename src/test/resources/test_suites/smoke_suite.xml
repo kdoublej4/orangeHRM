@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SmokeSuite" parallel="false">
         <listeners>
-<!--            <listener class-name="org.example.listener.ScreenshotListener"/>-->
+            <listener class-name="org.example.listener.ScreenshotListener"/>
         </listeners>
     <test name="SmokeTests">
         <classes>
