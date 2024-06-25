@@ -1,6 +1,4 @@
 
-import io.qameta.allure.testng.Tag;
-import org.example.listener.ScreenshotListener;
 import org.example.pages.Admin.entities.AddUserEntities;
 import org.example.utils.Randomizer;
 import org.testng.Assert;
