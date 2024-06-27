@@ -11,34 +11,47 @@ import org.testng.ITestResult;
 
 public class ScreenshotListener implements ITestListener {
     WebDriver driver = DriverManager.getDriver();
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveScreenshotPNG() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        System.out.println("Test " + result.getName() + " started.");
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        System.out.println("Test " + result.getName() + " passed.");
+    }
+
     @Override
     public void onTestFailure(ITestResult result) {
         if (driver != null){
             saveScreenshotPNG();
         }
+        System.out.println("Test " + result.getName() + " failed.");
     }
-    @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] saveScreenshotPNG() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-    }
-    @Override
-    public void onStart(ITestContext context) {
-        System.out.println("Hello OnStart");
-    }
-    @Override
-    public void onTestStart(ITestResult result) {
-        System.out.println("Hello on TestStart");
-    }
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        System.out.println("Hello onTestSuccess");
-    }
-    @Override
-    public void onFinish(ITestContext context) {
-        ITestListener.super.onFinish(context);
-    }
+
     @Override
     public void onTestSkipped(ITestResult result) {
-        ITestListener.super.onTestSkipped(result);
+        System.out.println("Test " + result.getName() + " skipped.");
+//        ITestListener.super.onTestSkipped(result);
+    }
+
+    @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        System.out.println("Test " + result.getName() + " failed but is within the success percentage.");
+    }
+
+    @Override
+    public void onStart(ITestContext context) {
+        System.out.println("Starting execution of test context: " + context.getName());
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        System.out.println("Finished execution of test context: " + context.getName());
     }
 }
