@@ -7,7 +7,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.enums.Endpoints.*;
-@Listeners(org.example.listener.ScreenshotListener.class)
+//@Listeners(org.example.listener.ScreenshotListener.class)
 public class UserManagamentTest extends BaseTest {
     @BeforeClass
     public void beforeClass() {
