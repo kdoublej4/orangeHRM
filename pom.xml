@@ -11,7 +11,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <resultsPatternAllure>**/allure-results</resultsPatternAllure>
+<!--        <resultsPatternAllure>**/allure-results</resultsPatternAllure>-->
         <allure.version>2.17.3</allure.version>
         <allure.testng.version>2.17.3</allure.testng.version>
         <aspectj.version>1.9.19</aspectj.version>
