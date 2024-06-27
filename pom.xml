@@ -96,7 +96,7 @@
                 <configuration>
                     <forkCount>1</forkCount>
                     <reuseForks>true</reuseForks>
-                    <debugForkedProcess>true</debugForkedProcess>
+<!--                    <debugForkedProcess>true</debugForkedProcess>-->
                     <failIfNoSpecifiedTests>false</failIfNoSpecifiedTests>
                     <failIfNoTests>false</failIfNoTests>
                     <encoding>UTF-8</encoding>
