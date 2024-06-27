@@ -14,14 +14,14 @@ public class UserManagamentTest extends BaseTest {
         browserHelper.openPageAndLogin();
     }
 
-    @Test(groups = "Smoke")
+    @Test(groups = {"Smoke"})
     public void addNewUser() {
         AddUserEntities addUserEntities = Randomizer.addUserData();
         menuNavigate.navigateTo(ADMIN);
         Assert.assertEquals(addUserEntities.getUserName(), addUserPage.addNewUserAndSave(addUserEntities));
     }
 
-    @Test(priority = 1, groups = "Smoke")
+    @Test(priority = 1, groups = {"Regression"})
     public void addNewUserAndCancel() {
         AddUserEntities addUserEntities = Randomizer.addUserData();
         menuNavigate.navigateTo(ADMIN);

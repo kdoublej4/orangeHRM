@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="regression_suite" parallel="false">
-<!--    <listeners>-->
-<!--        <listener class-name="com.listener.ScreenshotListener"></listener>-->
-<!--    </listeners>-->
-    <test verbose="2" preserve-order="true" name="/Users/janbolot/QA/Ideaprojects/DigitalNomad/DemoQAWinter24">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegressionSuite" verbose="1" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="org.example.listener.ScreenshotListener"/>
+    </listeners>
+    <test name="RegressionTests" group-by-instances="true">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
         <classes>
-
+<!--            <class name="UserManagamentTest"></class>-->
         </classes>
     </test>
 </suite>

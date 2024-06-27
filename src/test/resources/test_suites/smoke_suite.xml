@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="2" preserve-order="true" name="SmokeSuite" parallel="none">
-        <listeners>
-            <listener class-name="org.example.listener.ScreenshotListener"/>
-        </listeners>
-    <test name="Smoke">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SmokeSuite" verbose="1" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="org.example.listener.ScreenshotListener"/>
+    </listeners>
+    <test name="SmokeTests" group-by-instances="true">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
         <classes>
             <class name="UserManagamentTest"/>
         </classes>
