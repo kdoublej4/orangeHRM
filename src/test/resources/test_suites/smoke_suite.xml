@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="2" preserve-order="true" name="SmokeSuite" parallel="none">
-<!--        <listeners>-->
-<!--            <listener class-name="org.example.listener.ScreenshotListener"/>-->
-<!--        </listeners>-->
-    <test name="SmokeTests">
+        <listeners>
+            <listener class-name="org.example.listener.ScreenshotListener"/>
+        </listeners>
+    <test name="Smoke">
         <classes>
             <class name="UserManagamentTest"/>
         </classes>
